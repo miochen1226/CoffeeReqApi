@@ -68,7 +68,7 @@ Creates a new coffee order with the provided details
 // The following code samples are still beta. For any issue, please report via http://github.com/OpenAPITools/openapi-generator/issues/new
 import OpenAPIClient
 
-let orderDTO = OrderDTO(ticketUUID: 123, customerName: "customerName_example", productName: "productName_example", count: 123, pickupTime: Date(), temperature: TemperatureOption()) // OrderDTO | 
+let orderDTO = OrderDTO(ticketUUID: 123, customerName: "customerName_example", productName: "productName_example", count: 123, pickupTime: Date(), temperature: TemperatureOption(), isUserCup: true) // OrderDTO | 
 
 // Create a new coffee order
 DefaultAPI.ordersPost(orderDTO: orderDTO) { (response, error) in

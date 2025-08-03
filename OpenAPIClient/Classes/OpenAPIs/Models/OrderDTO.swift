@@ -24,14 +24,17 @@ public struct OrderDTO: Codable, JSONEncodable, Hashable {
     /** 取餐时间 */
     public var pickupTime: Date
     public var temperature: TemperatureOption
+    /** 是否使用顾客自带杯子 */
+    public var isUserCup: Bool
 
-    public init(ticketUUID: UUID, customerName: String, productName: String, count: Int, pickupTime: Date, temperature: TemperatureOption) {
+    public init(ticketUUID: UUID, customerName: String, productName: String, count: Int, pickupTime: Date, temperature: TemperatureOption, isUserCup: Bool) {
         self.ticketUUID = ticketUUID
         self.customerName = customerName
         self.productName = productName
         self.count = count
         self.pickupTime = pickupTime
         self.temperature = temperature
+        self.isUserCup = isUserCup
     }
 
     public enum CodingKeys: String, CodingKey, CaseIterable {
@@ -41,6 +44,7 @@ public struct OrderDTO: Codable, JSONEncodable, Hashable {
         case count
         case pickupTime
         case temperature
+        case isUserCup
     }
 
     // Encodable protocol methods
@@ -53,6 +57,7 @@ public struct OrderDTO: Codable, JSONEncodable, Hashable {
         try container.encode(count, forKey: .count)
         try container.encode(pickupTime, forKey: .pickupTime)
         try container.encode(temperature, forKey: .temperature)
+        try container.encode(isUserCup, forKey: .isUserCup)
     }
 }
 

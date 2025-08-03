@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **count** | **Int** | 商品数量（最小值为1） | 
 **pickupTime** | **Date** | 取餐时间 | 
 **temperature** | [**TemperatureOption**](TemperatureOption.md) |  | 
+**isUserCup** | **Bool** | 是否使用顾客自带杯子 | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
